@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 下标赋值 -->
+<!--    <bean id="user" class="com.cc.pojo.User">-->
+<!--        <constructor-arg index="0" value="cccccc"/>-->
+<!--    </bean>-->
+
+    <!-- 不建议使用，通过类型创建 -->
+<!--    <bean id="user" class="com.cc.pojo.User">-->
+<!--        <constructor-arg type="java.lang.String" value="wwwwww"/>-->
+<!--    </bean>-->
+
+    <!-- 参数名 -->
+    <bean id="user" class="com.cc.pojo.User">
+        <constructor-arg name="name" value="dddddd"/>
+    </bean>
+
+    <bean id="userT" class="com.cc.pojo.UserT">
+
+    </bean>
+
+</beans>
