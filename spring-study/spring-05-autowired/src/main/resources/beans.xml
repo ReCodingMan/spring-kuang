@@ -22,4 +22,7 @@
     <bean id="cat" class="com.cc.pojo.Cat"/>
     <bean id="dog111" class="com.cc.pojo.Dog"/>
 
+
+
+
 </beans>

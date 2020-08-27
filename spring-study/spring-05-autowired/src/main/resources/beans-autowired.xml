@@ -9,20 +9,11 @@
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!--
-    byName：
-        会自动查找容器上下文，和自己set方法后面值对应的beanid
-    byType：
-        会自动查找容器上下文，和自己对象属性相同的bean
-    -->
-    <bean id="people" class="com.cc.pojo.People" autowire="byType">
-        <property name="name" value="cc"/>
-    </bean>
+    <context:annotation-config/>
 
-    <bean id="cat" class="com.cc.pojo.Cat"/>
+    <bean id="people" class="com.cc.pojo.People"/>
+    <bean id="cat111" class="com.cc.pojo.Cat"/>
+    <bean id="cat222" class="com.cc.pojo.Cat"/>
     <bean id="dog111" class="com.cc.pojo.Dog"/>
-
-
-
-
+    <bean id="dog222" class="com.cc.pojo.Dog"/>
 </beans>

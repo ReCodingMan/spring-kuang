@@ -12,4 +12,12 @@ public class MyTest {
         people.getCat().shout();
         people.getDog().shout();
     }
+
+    @Test
+    public void test2() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("beans-autowired.xml");
+        People people = context.getBean("people", People.class);
+        people.getCat().shout();
+        people.getDog().shout();
+    }
 }

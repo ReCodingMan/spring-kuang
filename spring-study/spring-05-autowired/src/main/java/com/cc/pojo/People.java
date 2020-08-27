@@ -1,9 +1,17 @@
 package com.cc.pojo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+import javax.annotation.Resource;
+
 public class People {
 
     private String name;
+    @Resource(name = "cat222")
     private Cat cat;
+    @Autowired
+    @Qualifier(value = "dog111")
     private Dog dog;
 
     public String getName() {
