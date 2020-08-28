@@ -21,7 +21,8 @@ public class MyTest {
     public void test() {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserMapper userMapper = context.getBean("userMapper", UserMapper.class);
-        userMapper.addUser(new User(3,"橙子","23333"));
+        userMapper.addUser(new User(4,"橙子","23333"));
+        userMapper.deleteUser(2);
     }
 
     @Test
