@@ -28,10 +28,21 @@ public class MyTest {
     }
 
     @Test
-    public void test2() throws IOException {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring-dao.xml");
+    public void test2() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         UserMapper userMapper = context.getBean("userMapper", UserMapper.class);
+        List<User> users = userMapper.selectUser();
+        for (User user : users) {
+            System.out.println(user);
+        }
+    }
+
+    @Test
+    public void test3() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        UserMapper userMapper = context.getBean("userMapper2", UserMapper.class);
         List<User> users = userMapper.selectUser();
         for (User user : users) {
             System.out.println(user);

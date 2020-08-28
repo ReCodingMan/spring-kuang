@@ -33,8 +33,4 @@
         <constructor-arg index="0" ref="sqlSessionFactory"/>
     </bean>
 
-    <bean id="userMapper" class="com.cc.mapper.UserMapperImpl">
-        <property name="sqlSessionTemplate" ref="sqlSession"/>
-    </bean>
-
 </beans>
